@@ -179,6 +179,14 @@
     <Compile Include="Migrations\201608090255529_Initial.Designer.cs">
       <DependentUpon>201608090255529_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608092231589_Alteração de Nome de Foreing Key.cs" />
+    <Compile Include="Migrations\201608092231589_Alteração de Nome de Foreing Key.Designer.cs">
+      <DependentUpon>201608092231589_Alteração de Nome de Foreing Key.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608092242284_Alteração de Model.cs" />
+    <Compile Include="Migrations\201608092242284_Alteração de Model.Designer.cs">
+      <DependentUpon>201608092242284_Alteração de Model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -271,6 +279,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201608090255529_Initial.resx">
       <DependentUpon>201608090255529_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608092231589_Alteração de Nome de Foreing Key.resx">
+      <DependentUpon>201608092231589_Alteração de Nome de Foreing Key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608092242284_Alteração de Model.resx">
+      <DependentUpon>201608092242284_Alteração de Model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

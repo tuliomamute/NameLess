@@ -25,6 +25,7 @@ namespace NameLess.Models
         public string CnpjCliente { get; set; }
 
         public virtual ICollection<Pesquisas> Pesquisa { get; set; }
+
         public virtual ICollection<ApplicationUser> Usuario { get; set; }
     }
 }
