@@ -8,7 +8,6 @@ using System.Web;
 
 namespace NameLess.Models
 {
-    [Table("Cliente")]
     public class Cliente
     {
         public Cliente()

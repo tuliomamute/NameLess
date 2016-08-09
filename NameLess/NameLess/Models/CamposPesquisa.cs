@@ -8,7 +8,6 @@ using System.Web;
 
 namespace NameLess.Models
 {
-    [Table("CamposPesquisa")]
     public class CamposPesquisa
     {
         [Key]
