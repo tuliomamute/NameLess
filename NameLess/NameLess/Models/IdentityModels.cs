@@ -29,5 +29,11 @@ namespace NameLess.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<NameLess.Models.Tags> Tags { get; set; }
+        public System.Data.Entity.DbSet<NameLess.Models.CamposPesquisa> CamposPesquisa { get; set; }
+        public System.Data.Entity.DbSet<NameLess.Models.Pesquisas> Pesquisas { get; set; }
+        public System.Data.Entity.DbSet<NameLess.Models.Cliente> Cliente { get; set; }
+
     }
 }
