@@ -1,0 +1,42 @@
+﻿@model NameLess.Models.Tags
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tags</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoTag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoTag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ObservacaoTag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ObservacaoTag)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TagId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

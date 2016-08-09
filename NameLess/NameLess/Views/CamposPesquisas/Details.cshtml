@@ -1,0 +1,42 @@
+﻿@model NameLess.Models.CamposPesquisa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CamposPesquisa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tags.Tag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tags.Tag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCampo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdCampo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCampo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoCampo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CamposPesquisaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
