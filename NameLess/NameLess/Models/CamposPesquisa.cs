@@ -9,7 +9,7 @@ using System.Web;
 namespace NameLess.Models
 {
     [Table("CamposPesquisa")]
-    public class CamposPesquisaModels
+    public class CamposPesquisa
     {
         [Key]
         public int CamposPesquisaId { get; set; }
@@ -21,6 +21,6 @@ namespace NameLess.Models
         public string TipoCampo { get; set; }
 
         [ForeignKey("TagId")]
-        public virtual TagsModels Tags { get; set; }
+        public virtual Tags Tags { get; set; }
     }
 }

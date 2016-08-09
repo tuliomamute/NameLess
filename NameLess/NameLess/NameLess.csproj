@@ -179,12 +179,12 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\CamposPesquisaModels.cs" />
-    <Compile Include="Models\ClienteModels.cs" />
+    <Compile Include="Models\CamposPesquisa.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\PesquisasModels.cs" />
-    <Compile Include="Models\TagsModels.cs" />
+    <Compile Include="Models\Pesquisas.cs" />
+    <Compile Include="Models\Tags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

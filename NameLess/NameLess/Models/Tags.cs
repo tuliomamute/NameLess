@@ -9,12 +9,12 @@ using System.Web;
 namespace NameLess.Models
 {
     [Table("Cliente")]
-    public class TagsModels
+    public class Tags
     {
-        public TagsModels()
+        public Tags()
         {
-            this.CamposPesquisa = new HashSet<CamposPesquisaModels>();
-            this.Pesquisa = new HashSet<PesquisasModels>();
+            this.CamposPesquisa = new HashSet<CamposPesquisa>();
+            this.Pesquisa = new HashSet<Pesquisas>();
         }
 
         [Key]
@@ -26,7 +26,7 @@ namespace NameLess.Models
         public string DescricaoTag { get; set; }
         [DisplayName("Observação")]
         public string ObservacaoTag { get; set; }
-        public virtual ICollection<CamposPesquisaModels> CamposPesquisa { get; set; }
-        public virtual ICollection<PesquisasModels> Pesquisa { get; set; }
+        public virtual ICollection<CamposPesquisa> CamposPesquisa { get; set; }
+        public virtual ICollection<Pesquisas> Pesquisa { get; set; }
     }
 }

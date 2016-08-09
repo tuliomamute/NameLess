@@ -9,11 +9,11 @@ using System.Web;
 namespace NameLess.Models
 {
     [Table("Cliente")]
-    public class ClienteModels
+    public class Cliente
     {
-        public ClienteModels()
+        public Cliente()
         {
-            this.Pesquisa = new HashSet<PesquisasModels>();
+            this.Pesquisa = new HashSet<Pesquisas>();
         }
 
         [Key]
@@ -25,7 +25,7 @@ namespace NameLess.Models
         [DisplayName("CNPJ")]
         public string CnpjCliente { get; set; }
 
-        public virtual ICollection<PesquisasModels> Pesquisa { get; set; }
+        public virtual ICollection<Pesquisas> Pesquisa { get; set; }
         public virtual ICollection<ApplicationUser> Usuario { get; set; }
     }
 }
