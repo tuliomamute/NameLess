@@ -187,6 +187,10 @@
     <Compile Include="Migrations\201608092242284_Alteração de Model.Designer.cs">
       <DependentUpon>201608092242284_Alteração de Model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.cs" />
+    <Compile Include="Migrations\201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.Designer.cs">
+      <DependentUpon>201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -285,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608092242284_Alteração de Model.resx">
       <DependentUpon>201608092242284_Alteração de Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.resx">
+      <DependentUpon>201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

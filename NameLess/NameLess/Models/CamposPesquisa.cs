@@ -19,7 +19,11 @@ namespace NameLess.Models
         [DisplayName("Tipo do Campo")]
         public string TipoCampo { get; set; }
 
+        public string UsuarioId { get; set; }
         [ForeignKey("TagId")]
         public virtual Tags Tags { get; set; }
+        [ForeignKey("UsuarioId")]
+        public virtual ApplicationUser Usuario { get; set; }
+
     }
 }

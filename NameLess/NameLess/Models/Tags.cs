@@ -25,7 +25,11 @@ namespace NameLess.Models
         public string DescricaoTag { get; set; }
         [DisplayName("Observação")]
         public string ObservacaoTag { get; set; }
+        public string UsuarioId { get; set; }
         public virtual ICollection<CamposPesquisa> CamposPesquisa { get; set; }
         public virtual ICollection<Pesquisas> Pesquisa { get; set; }
+        [ForeignKey("UsuarioId")]
+        public virtual ApplicationUser Usuario { get; set; }
+
     }
 }
