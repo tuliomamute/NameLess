@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using NameLess.Models;
+using Microsoft.AspNet.Identity;
 
 namespace NameLess.Controllers
 {
@@ -50,6 +51,8 @@ namespace NameLess.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CamposPesquisaId,TagId,IdCampo,TipoCampo")] CamposPesquisa camposPesquisa)
         {
+            camposPesquisa.UsuarioId = User.Identity.GetUserId();
+
             if (ModelState.IsValid)
             {
                 db.CamposPesquisa.Add(camposPesquisa);
@@ -84,6 +87,8 @@ namespace NameLess.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "CamposPesquisaId,TagId,IdCampo,TipoCampo")] CamposPesquisa camposPesquisa)
         {
+            camposPesquisa.UsuarioId = User.Identity.GetUserId();
+
             if (ModelState.IsValid)
             {
                 db.Entry(camposPesquisa).State = EntityState.Modified;

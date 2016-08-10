@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using NameLess.Models;
+using Microsoft.AspNet.Identity;
 
 namespace NameLess.Controllers
 {
@@ -48,6 +49,9 @@ namespace NameLess.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "TagId,Tag,DescricaoTag,ObservacaoTag")] Tags tags)
         {
+
+            tags.UsuarioId = User.Identity.GetUserId();
+               
             if (ModelState.IsValid)
             {
                 db.Tags.Add(tags);
@@ -80,6 +84,8 @@ namespace NameLess.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "TagId,Tag,DescricaoTag,ObservacaoTag")] Tags tags)
         {
+            tags.UsuarioId = User.Identity.GetUserId();
+
             if (ModelState.IsValid)
             {
                 db.Entry(tags).State = EntityState.Modified;
