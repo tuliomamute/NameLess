@@ -40,6 +40,7 @@ namespace NameLess.Controllers
         // GET: CamposPesquisas/Create
         public ActionResult Create()
         {
+            MontagemViewBag();
             ViewBag.TagId = new SelectList(db.Tags, "TagId", "Tag");
             return View();
         }
@@ -76,6 +77,7 @@ namespace NameLess.Controllers
             {
                 return HttpNotFound();
             }
+            MontagemViewBag();
             ViewBag.TagId = new SelectList(db.Tags, "TagId", "Tag", camposPesquisa.TagId);
             return View(camposPesquisa);
         }
@@ -133,5 +135,12 @@ namespace NameLess.Controllers
             }
             base.Dispose(disposing);
         }
+
+        #region Métodos Genéricos
+        private void MontagemViewBag()
+        {
+            ViewBag.TipoCampo = new SelectList(new CamposPesquisa().RetornaTipoCampos(), "TipoCampoId", "Nome");
+        }
+        #endregion
     }
 }
