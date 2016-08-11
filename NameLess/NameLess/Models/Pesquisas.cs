@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
 using System.Linq;
 using System.Web;
 
@@ -12,7 +13,7 @@ namespace NameLess.Models
         [Key]
         public int PesquisaId { get; set; }
         public string TermoPesquisado { get; set; }
-        public string Localizacao { get; set; }
+        public DbGeography Localizacao { get; set; }
         public string DataPesquisa { get; set; }
         [Required]
         public int ClienteId { get; set; }

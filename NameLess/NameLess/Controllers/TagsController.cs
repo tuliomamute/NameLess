@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity;
 
 namespace NameLess.Controllers
 {
+    [Authorize]
     public class TagsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
