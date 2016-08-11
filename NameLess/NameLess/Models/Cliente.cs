@@ -27,5 +27,6 @@ namespace NameLess.Models
         public virtual ICollection<Pesquisas> Pesquisa { get; set; }
 
         public virtual ICollection<ApplicationUser> Usuario { get; set; }
+
     }
 }

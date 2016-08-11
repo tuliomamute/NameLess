@@ -139,6 +139,7 @@ namespace NameLess.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.ClienteId = new SelectList(new ClientesController().RecuperaClientes(), "ClienteId", "NomeCliente");
             return View();
         }
 
@@ -151,7 +152,7 @@ namespace NameLess.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, ClienteId = model.ClienteId != 0 ? null : (int?)model.ClienteId };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, ClienteId = model.ClienteId != 0 ? (int?)model.ClienteId : null };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
