@@ -1,4 +1,4 @@
-﻿using NameLess.Utilitario;
+﻿using Utilitario.Utilitario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace NameLess.Models
+namespace SharedModels.Models
 {
     public class CamposPesquisa
     {

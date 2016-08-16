@@ -6,7 +6,7 @@ using System.Data.Entity.Spatial;
 using System.Linq;
 using System.Web;
 
-namespace NameLess.Models
+namespace SharedModels.Models
 {
     public class Pesquisas
     {

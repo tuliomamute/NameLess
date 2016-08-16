@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace NameLess.Models
+namespace SharedModels.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -18,10 +18,10 @@ namespace NameLess.Models
             return new ApplicationDbContext();
         }
 
-        public System.Data.Entity.DbSet<NameLess.Models.Tags> Tags { get; set; }
-        public System.Data.Entity.DbSet<NameLess.Models.CamposPesquisa> CamposPesquisa { get; set; }
-        public System.Data.Entity.DbSet<NameLess.Models.Pesquisas> Pesquisas { get; set; }
-        public System.Data.Entity.DbSet<NameLess.Models.Cliente> Cliente { get; set; }
+        public System.Data.Entity.DbSet<SharedModels.Models.Tags> Tags { get; set; }
+        public System.Data.Entity.DbSet<SharedModels.Models.CamposPesquisa> CamposPesquisa { get; set; }
+        public System.Data.Entity.DbSet<SharedModels.Models.Pesquisas> Pesquisas { get; set; }
+        public System.Data.Entity.DbSet<SharedModels.Models.Cliente> Cliente { get; set; }
 
     }
 }

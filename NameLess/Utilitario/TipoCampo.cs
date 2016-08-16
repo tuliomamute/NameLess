@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace NameLess.Utilitario
+namespace Utilitario.Utilitario
 {
     public class TipoCampo
     {

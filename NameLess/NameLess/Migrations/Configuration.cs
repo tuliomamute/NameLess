@@ -5,14 +5,14 @@ namespace NameLess.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<NameLess.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SharedModels.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(NameLess.Models.ApplicationDbContext context)
+        protected override void Seed(SharedModels.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
