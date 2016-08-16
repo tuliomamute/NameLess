@@ -1,4 +1,4 @@
-namespace NameLess.Migrations
+namespace SharedModels.Migrations
 {
     using System;
     using System.Data.Entity;

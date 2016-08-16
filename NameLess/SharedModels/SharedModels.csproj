@@ -93,6 +93,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201608162309439_FirstCommit.cs" />
+    <Compile Include="Migrations\201608162309439_FirstCommit.Designer.cs">
+      <DependentUpon>201608162309439_FirstCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\CamposPesquisa.cs" />
@@ -112,6 +117,11 @@
       <Project>{53083826-b00e-4401-8e14-b5f76dc68d9b}</Project>
       <Name>Utilitario</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201608162309439_FirstCommit.resx">
+      <DependentUpon>201608162309439_FirstCommit.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -15,8 +15,10 @@ namespace SharedModels.Models
         public int CamposPesquisaId { get; set; }
         [Required]
         public int TagId { get; set; }
-        [DisplayName("Nome do Campo")]
-        public string IdCampo { get; set; }
+        [DisplayName("Nome do Campo Texto")]
+        public string IdCampoTexto { get; set; }
+        [DisplayName("Nome do Campo Botão")]
+        public string IdCampoBotao { get; set; }
         [DisplayName("Tipo do Campo")]
         public string TipoCampo { get; set; }
 

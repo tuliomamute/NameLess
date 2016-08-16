@@ -1,9 +1,9 @@
-namespace NameLess.Migrations
+namespace SharedModels.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class FirstCommit : DbMigration
     {
         public override void Up()
         {
@@ -13,12 +13,16 @@ namespace NameLess.Migrations
                     {
                         CamposPesquisaId = c.Int(nullable: false, identity: true),
                         TagId = c.Int(nullable: false),
-                        IdCampo = c.String(),
+                        IdCampoTexto = c.String(),
+                        IdCampoBotao = c.String(),
                         TipoCampo = c.String(),
+                        UsuarioId = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.CamposPesquisaId)
                 .ForeignKey("dbo.Tags", t => t.TagId, cascadeDelete: true)
-                .Index(t => t.TagId);
+                .ForeignKey("dbo.AspNetUsers", t => t.UsuarioId)
+                .Index(t => t.TagId)
+                .Index(t => t.UsuarioId);
             
             CreateTable(
                 "dbo.Tags",
@@ -28,8 +32,11 @@ namespace NameLess.Migrations
                         Tag = c.String(),
                         DescricaoTag = c.String(),
                         ObservacaoTag = c.String(),
+                        UsuarioId = c.String(maxLength: 128),
                     })
-                .PrimaryKey(t => t.TagId);
+                .PrimaryKey(t => t.TagId)
+                .ForeignKey("dbo.AspNetUsers", t => t.UsuarioId)
+                .Index(t => t.UsuarioId);
             
             CreateTable(
                 "dbo.Pesquisas",
@@ -37,7 +44,7 @@ namespace NameLess.Migrations
                     {
                         PesquisaId = c.Int(nullable: false, identity: true),
                         TermoPesquisado = c.String(),
-                        Localizacao = c.String(),
+                        Localizacao = c.Geography(),
                         DataPesquisa = c.String(),
                         ClienteId = c.Int(nullable: false),
                         TagId = c.Int(nullable: false),
@@ -64,6 +71,7 @@ namespace NameLess.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        ClienteId = c.Int(),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
@@ -75,12 +83,11 @@ namespace NameLess.Migrations
                         LockoutEnabled = c.Boolean(nullable: false),
                         AccessFailedCount = c.Int(nullable: false),
                         UserName = c.String(nullable: false, maxLength: 256),
-                        Cliente_ClienteId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Clientes", t => t.Cliente_ClienteId)
-                .Index(t => t.UserName, unique: true, name: "UserNameIndex")
-                .Index(t => t.Cliente_ClienteId);
+                .ForeignKey("dbo.Clientes", t => t.ClienteId)
+                .Index(t => t.ClienteId)
+                .Index(t => t.UserName, unique: true, name: "UserNameIndex");
             
             CreateTable(
                 "dbo.AspNetUserClaims",
@@ -136,10 +143,12 @@ namespace NameLess.Migrations
         {
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.Pesquisas", "TagId", "dbo.Tags");
-            DropForeignKey("dbo.AspNetUsers", "Cliente_ClienteId", "dbo.Clientes");
+            DropForeignKey("dbo.Tags", "UsuarioId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.AspNetUsers", "ClienteId", "dbo.Clientes");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
+            DropForeignKey("dbo.CamposPesquisas", "UsuarioId", "dbo.AspNetUsers");
             DropForeignKey("dbo.Pesquisas", "ClienteId", "dbo.Clientes");
             DropForeignKey("dbo.CamposPesquisas", "TagId", "dbo.Tags");
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
@@ -147,10 +156,12 @@ namespace NameLess.Migrations
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
-            DropIndex("dbo.AspNetUsers", new[] { "Cliente_ClienteId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
+            DropIndex("dbo.AspNetUsers", new[] { "ClienteId" });
             DropIndex("dbo.Pesquisas", new[] { "TagId" });
             DropIndex("dbo.Pesquisas", new[] { "ClienteId" });
+            DropIndex("dbo.Tags", new[] { "UsuarioId" });
+            DropIndex("dbo.CamposPesquisas", new[] { "UsuarioId" });
             DropIndex("dbo.CamposPesquisas", new[] { "TagId" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.AspNetUserRoles");

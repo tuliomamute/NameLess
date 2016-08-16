@@ -176,27 +176,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201608090255529_Initial.cs" />
-    <Compile Include="Migrations\201608090255529_Initial.Designer.cs">
-      <DependentUpon>201608090255529_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608092231589_Alteração de Nome de Foreing Key.cs" />
-    <Compile Include="Migrations\201608092231589_Alteração de Nome de Foreing Key.Designer.cs">
-      <DependentUpon>201608092231589_Alteração de Nome de Foreing Key.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608092242284_Alteração de Model.cs" />
-    <Compile Include="Migrations\201608092242284_Alteração de Model.Designer.cs">
-      <DependentUpon>201608092242284_Alteração de Model.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.cs" />
-    <Compile Include="Migrations\201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.Designer.cs">
-      <DependentUpon>201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201608102335493_Alteração de campo de Localização.cs" />
-    <Compile Include="Migrations\201608102335493_Alteração de campo de Localização.Designer.cs">
-      <DependentUpon>201608102335493_Alteração de campo de Localização.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -279,23 +258,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201608090255529_Initial.resx">
-      <DependentUpon>201608090255529_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608092231589_Alteração de Nome de Foreing Key.resx">
-      <DependentUpon>201608092231589_Alteração de Nome de Foreing Key.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608092242284_Alteração de Model.resx">
-      <DependentUpon>201608092242284_Alteração de Model.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.resx">
-      <DependentUpon>201608092315040_adicionando foreign keys para tabelas de tag e campospesquisa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201608102335493_Alteração de campo de Localização.resx">
-      <DependentUpon>201608102335493_Alteração de campo de Localização.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharedModels\SharedModels.csproj">
