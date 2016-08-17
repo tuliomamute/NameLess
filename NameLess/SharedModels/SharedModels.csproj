@@ -101,6 +101,10 @@
     <Compile Include="Migrations\201608162309439_FirstCommit.Designer.cs">
       <DependentUpon>201608162309439_FirstCommit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608172300497_AlterarTipoColunaDataPesquisa.cs" />
+    <Compile Include="Migrations\201608172300497_AlterarTipoColunaDataPesquisa.Designer.cs">
+      <DependentUpon>201608172300497_AlterarTipoColunaDataPesquisa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -126,6 +130,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201608162309439_FirstCommit.resx">
       <DependentUpon>201608162309439_FirstCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608172300497_AlterarTipoColunaDataPesquisa.resx">
+      <DependentUpon>201608172300497_AlterarTipoColunaDataPesquisa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
