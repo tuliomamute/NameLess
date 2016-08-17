@@ -13,7 +13,7 @@ namespace SharedModels.Models
     {
         [Key]
         public int CamposPesquisaId { get; set; }
-        [Required]
+        [Required, DisplayName("Tag")]
         public int TagId { get; set; }
         [DisplayName("Nome do Campo Texto")]
         public string IdCampoTexto { get; set; }
@@ -23,7 +23,7 @@ namespace SharedModels.Models
         public string TipoCampo { get; set; }
 
         public string UsuarioId { get; set; }
-        [ForeignKey("TagId")]
+        [ForeignKey("TagId"), DisplayName("Tag")]
         public virtual Tags Tags { get; set; }
         [ForeignKey("UsuarioId")]
         public virtual ApplicationUser Usuario { get; set; }

@@ -15,7 +15,10 @@
             @Html.DisplayNameFor(model => model.Tags.Tag)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IdCampo)
+            @Html.DisplayNameFor(model => model.IdCampoTexto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdCampoBotao)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TipoCampo)
@@ -23,23 +26,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tags.Tag)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IdCampo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TipoCampo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CamposPesquisaId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CamposPesquisaId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CamposPesquisaId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tags.Tag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCampoTexto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCampoBotao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoCampo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CamposPesquisaId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CamposPesquisaId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CamposPesquisaId })
+            </td>
+        </tr>
+    }
 
 </table>

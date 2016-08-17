@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedModels", "SharedModel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitario", "Utilitario\Utilitario.csproj", "{53083826-B00E-4401-8E14-B5F76DC68D9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NameLess.WebApi", "NameLess.WebApi\NameLess.WebApi.csproj", "{47368F3F-E8E6-4335-B513-3BC27A31307C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{53083826-B00E-4401-8E14-B5F76DC68D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53083826-B00E-4401-8E14-B5F76DC68D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53083826-B00E-4401-8E14-B5F76DC68D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47368F3F-E8E6-4335-B513-3BC27A31307C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47368F3F-E8E6-4335-B513-3BC27A31307C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47368F3F-E8E6-4335-B513-3BC27A31307C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47368F3F-E8E6-4335-B513-3BC27A31307C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
