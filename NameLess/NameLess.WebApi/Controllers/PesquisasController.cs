@@ -25,7 +25,15 @@ namespace NameLess.WebApi.Controllers
             return "value";
         }
 
-        // POST: api/Pesquisas
+        /// <summary>
+        /// Inserção de uma nova pesquisa
+        /// </summary>
+        /// <param name="Termo">Termo Pesquisado</param>
+        /// <param name="DataPesquisa">Data Pesquisada</param>
+        /// <param name="CodCliente">Código do Cliente</param>
+        /// <param name="CodTag">Código da Tag</param>
+        /// <param name="Latitude">Latitude onde foi feita a pesquisa</param>
+        /// <param name="Longitude">Longitude onde foi feita a pesquisa</param>
         public void Post(string Termo, DateTime DataPesquisa, int CodCliente, int CodTag, double Latitude, double Longitude)
         {
             Pesquisas pesquisa = new Pesquisas();
