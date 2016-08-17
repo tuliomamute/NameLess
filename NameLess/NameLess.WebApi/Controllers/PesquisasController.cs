@@ -9,17 +9,27 @@ using System.Data.Entity.Spatial;
 
 namespace NameLess.WebApi.Controllers
 {
+    /// <summary>
+    /// Gerenciamento das Pesquisas Inclusas
+    /// </summary>
     public class PesquisasController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: api/Pesquisas
+        /// <summary>
+        /// Retorna a lista de pesquisa
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Pesquisas/5
+        /// <summary>
+        /// Recupera uma pesquisa dado o Id
+        /// </summary>
+        /// <param name="id">Código da Pesquisa</param>
+        /// <returns></returns>
         public string Get(int id)
         {
             return "value";
@@ -45,16 +55,6 @@ namespace NameLess.WebApi.Controllers
             db.Pesquisas.Add(pesquisa);
             db.SaveChanges();
 
-        }
-
-        // PUT: api/Pesquisas/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Pesquisas/5
-        public void Delete(int id)
-        {
         }
     }
 }
