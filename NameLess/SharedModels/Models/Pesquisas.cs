@@ -20,10 +20,16 @@ namespace SharedModels.Models
         [Required]
         public int TagId { get; set; }
 
+        [NotMapped]
+        public double Latitude { get; set; }
+        [NotMapped]
+        public double Longitude { get; set; }
+
         [ForeignKey("ClienteId")]
         public virtual Cliente Cliente { get; set; }
 
         [ForeignKey("TagId")]
         public virtual Tags Tags { get; set; }
+
     }
 }
