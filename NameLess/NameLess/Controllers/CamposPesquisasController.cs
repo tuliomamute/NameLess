@@ -8,6 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using SharedModels.Models;
 using Microsoft.AspNet.Identity;
+using System.IO;
+using System.Reflection;
+using System.Configuration;
+using System.Text;
 
 namespace NameLess.Controllers
 {
@@ -51,7 +55,7 @@ namespace NameLess.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CamposPesquisaId,TagId,IdCampo,TipoCampo")] CamposPesquisa camposPesquisa)
+        public ActionResult Create(CamposPesquisa camposPesquisa)
         {
             camposPesquisa.UsuarioId = User.Identity.GetUserId();
 
@@ -128,6 +132,28 @@ namespace NameLess.Controllers
             return RedirectToAction("Index");
         }
 
+        public FileStreamResult Script(int id)
+        {
+            StreamReader a = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(@"NameLess.TemplateScript.ScriptById.js"));
+            String script = a.ReadToEnd();
+
+            var dadosscript = db.CamposPesquisa.Join(db.Users,
+                  x => x.UsuarioId,
+                  y => y.Id,
+                  (x, y) => new { CamposPesquisaId = x.CamposPesquisaId, ClienteId = x.Usuario.ClienteId, TagId = x.TagId, IdCampoTexto = x.IdCampoTexto, IdCampoBotao = x.IdCampoBotao })
+                  .Where(x => x.CamposPesquisaId == id).FirstOrDefault();
+
+            script = script.Replace("{IdCampoBotao}", dadosscript.IdCampoBotao);
+            script = script.Replace("{IdCampoTexto}", dadosscript.IdCampoTexto);
+            script = script.Replace("{ClienteId}", dadosscript.ClienteId.ToString());
+            script = script.Replace("{TagId}", dadosscript.TagId.ToString());
+            script = script.Replace("{UrlApi}", ConfigurationManager.AppSettings["UrlApi"].ToString());
+
+            MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(script));
+            return File(stream, "text/javascript", "NameLess.js");
+        }
+
+        #region Métodos Genéricos
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -137,7 +163,6 @@ namespace NameLess.Controllers
             base.Dispose(disposing);
         }
 
-        #region Métodos Genéricos
         private void MontagemViewBag()
         {
             ViewBag.TipoCampo = new SelectList(new CamposPesquisa().RetornaTipoCampos(), "TipoCampoId", "Nome");
