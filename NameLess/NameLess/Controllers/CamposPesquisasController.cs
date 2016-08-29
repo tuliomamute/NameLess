@@ -134,14 +134,26 @@ namespace NameLess.Controllers
 
         public FileStreamResult Script(int id)
         {
-            StreamReader a = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(@"NameLess.TemplateScript.ScriptById.js"));
-            String script = a.ReadToEnd();
-
+            StreamReader arquivoScript = null;
             var dadosscript = db.CamposPesquisa.Join(db.Users,
                   x => x.UsuarioId,
                   y => y.Id,
-                  (x, y) => new { CamposPesquisaId = x.CamposPesquisaId, ClienteId = x.Usuario.ClienteId, TagId = x.TagId, IdCampoTexto = x.IdCampoTexto, IdCampoBotao = x.IdCampoBotao })
+                  (x, y) => new { TipoCampo = x.TipoCampo, CamposPesquisaId = x.CamposPesquisaId, ClienteId = x.Usuario.ClienteId, TagId = x.TagId, IdCampoTexto = x.IdCampoTexto, IdCampoBotao = x.IdCampoBotao })
                   .Where(x => x.CamposPesquisaId == id).FirstOrDefault();
+
+            switch (dadosscript.TipoCampo)
+            {
+                case "ID":
+                    arquivoScript = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(@"NameLess.TemplateScript.ScriptById.js"));
+                    break;
+                case "NAME":
+                    arquivoScript = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(@"NameLess.TemplateScript.ScriptByName.js"));
+                    break;
+                default:
+                    break;
+            }
+
+            String script = arquivoScript.ReadToEnd();
 
             script = script.Replace("{IdCampoBotao}", dadosscript.IdCampoBotao);
             script = script.Replace("{IdCampoTexto}", dadosscript.IdCampoTexto);
