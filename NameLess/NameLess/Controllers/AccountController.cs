@@ -170,6 +170,7 @@ namespace NameLess.Controllers
             }
 
             // If we got this far, something failed, redisplay form
+            ViewBag.ClienteId = new SelectList(new ClientesController().RecuperaClientes(), "ClienteId", "NomeCliente");
             return View(model);
         }
 
