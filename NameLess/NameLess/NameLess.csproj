@@ -182,17 +182,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\stylish-portfolio.css" />
+    <Content Include="Content\Carousel.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\bg.jpg" />
-    <Content Include="Images\callout.jpg" />
-    <Content Include="Images\portfolio-1.jpg" />
-    <Content Include="Images\portfolio-2.jpg" />
-    <Content Include="Images\portfolio-3.jpg" />
-    <Content Include="Images\portfolio-4.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\NameLess.pubxml" />
@@ -207,6 +201,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\_references.js" />
     <EmbeddedResource Include="TemplateScript\ScriptById.js" />
     <EmbeddedResource Include="TemplateScript\ScriptByName.js" />
@@ -223,7 +218,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -254,9 +248,11 @@
     <Content Include="Views\CamposPesquisas\Details.cshtml" />
     <Content Include="Views\CamposPesquisas\Edit.cshtml" />
     <Content Include="Views\CamposPesquisas\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Models\" />
     <Folder Include="Utilitario\" />
     <Folder Include="Views\Clientes\" />

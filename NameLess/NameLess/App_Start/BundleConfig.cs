@@ -23,10 +23,13 @@ namespace NameLess
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/sitejs").Include(
+                      "~/Scripts/Site.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/stylish-portfolio.css"));
+                      "~/Content/carousel.css"));
         }
     }
 }
