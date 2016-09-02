@@ -6,7 +6,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @{
+        string UsuarioLogado = User.Identity.IsAuthenticated ? "block" : "none";
+    }
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -22,8 +24,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Campos de Pesquisa", "Index", "CamposPesquisas")</li>
-                    <li>@Html.ActionLink("Tags", "Index", "Tags")</li>
+                    <li style="display: @UsuarioLogado"> @Html.ActionLink("Campos de Pesquisa", "Index", "CamposPesquisas")</li>
+                    <li style="display: @UsuarioLogado"> @Html.ActionLink("Tags", "Index", "Tags")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
