@@ -188,7 +188,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\City_01.jpg" />
+    <Content Include="Images\Clock_06.png" />
+    <Content Include="Images\Configuration_04.png" />
     <Content Include="Images\Graphics_03.jpg" />
+    <Content Include="Images\HandShake_05.png" />
     <Content Include="Images\Maps_02.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
