@@ -3,47 +3,48 @@
 @{
     ViewBag.Title = "Details";
 }
+<div class="container body-content">
+    <h2>Details</h2>
 
-<h2>Details</h2>
+    <div>
+        <h4>CamposPesquisa</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Tags.Tag)
+            </dt>
 
-<div>
-    <h4>CamposPesquisa</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Tags.Tag)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Tags.Tag)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Tags.Tag)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.IdCampoTexto)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IdCampoTexto)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IdCampoTexto)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.IdCampoBotao)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.IdCampoTexto)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.IdCampoBotao)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IdCampoBotao)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.IdCampoBotao)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoCampo)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipoCampo)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TipoCampo)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TipoCampo)
-        </dd>
-
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CamposPesquisaId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CamposPesquisaId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

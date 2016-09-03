@@ -3,53 +3,54 @@
 @{
     ViewBag.Title = "Delete";
 }
+<div class="container body-content">
+    <h2>Delete</h2>
 
-<h2>Delete</h2>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>CamposPesquisa</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Tags.Tag)
+            </dt>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>CamposPesquisa</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Tags.Tag)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Tags.Tag)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Tags.Tag)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.IdCampoTexto)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.IdCampoTexto)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IdCampoTexto)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.IdCampoBotao)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.IdCampoTexto)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.IdCampoBotao)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.IdCampoBotao)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.IdCampoBotao)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoCampo)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipoCampo)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TipoCampo)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TipoCampo)
-        </dd>
+        </dl>
 
-    </dl>
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
     }
+    </div>
 </div>
