@@ -184,6 +184,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Carousel.css" />
+    <Content Include="Content\leaflet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -193,7 +194,12 @@
     <Content Include="Images\Configuration_04.png" />
     <Content Include="Images\Graphics_03.jpg" />
     <Content Include="Images\HandShake_05.png" />
+    <Content Include="Images\layers-2x.png" />
+    <Content Include="Images\layers.png" />
     <Content Include="Images\Maps_02.jpg" />
+    <Content Include="Images\marker-icon-2x.png" />
+    <Content Include="Images\marker-icon.png" />
+    <Content Include="Images\marker-shadow.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\NameLess.pubxml" />
@@ -205,6 +211,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\leaflet.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
