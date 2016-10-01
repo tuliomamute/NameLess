@@ -22,3 +22,7 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#mapa1 {
+height:100%;
+}

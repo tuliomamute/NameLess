@@ -26,10 +26,17 @@ namespace NameLess
             bundles.Add(new ScriptBundle("~/bundles/sitejs").Include(
                       "~/Scripts/Site.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/leafletjs").Include(
+                      "~/Scripts/leaflet.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/mapsjs").Include(
+                      "~/Scripts/Maps.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/carousel.css"));
+                      "~/Content/carousel.css",
+                      "~/Content/leaflet.css"));
         }
     }
 }

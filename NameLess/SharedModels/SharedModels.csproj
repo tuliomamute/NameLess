@@ -97,6 +97,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\DashBoard.cs" />
     <Compile Include="Migrations\201608162309439_FirstCommit.cs" />
     <Compile Include="Migrations\201608162309439_FirstCommit.Designer.cs">
       <DependentUpon>201608162309439_FirstCommit.cs</DependentUpon>

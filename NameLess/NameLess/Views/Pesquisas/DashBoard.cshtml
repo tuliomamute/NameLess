@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SharedModels.Models.DashBoard>
+
+@{
+    ViewBag.Title = "DashBoard";
+}
+<div class="container body-content">
+
+    <h2>DashBoard</h2>
+
+    <table class="table table-hover table-condensed table-responsive">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TermoPesquisado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataPesquisa)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoTag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TermoPesquisado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPesquisa)
+            </td>
+        </tr>
+        }
+
+    </table>
+
+    <div id="mapa1"></div>
+
+    <script>
+        
+    </script>
+</div>
+
+
+

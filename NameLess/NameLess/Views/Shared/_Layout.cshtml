@@ -6,8 +6,9 @@
     <title>Nameless - Esteja um Passo a Frente</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
     @{
-        string UsuarioLogado = User.Identity.IsAuthenticated ? "block" : "none";
+        string UsuarioLogado = User.Identity.IsAuthenticated ? "block" : "none";       
     }
 </head>
 <body>
@@ -26,6 +27,8 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li style="display: @UsuarioLogado"> @Html.ActionLink("Campos de Pesquisa", "Index", "CamposPesquisas")</li>
                     <li style="display: @UsuarioLogado"> @Html.ActionLink("Tags", "Index", "Tags")</li>
+                    <li style="display: @UsuarioLogado"> @Html.ActionLink("Pesquisas", "DashBoard", "Pesquisas")</li>
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -42,6 +45,10 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/sitejs")
+    @Scripts.Render("~/bundles/leafletjs")
+    @Scripts.Render("~/bundles/mapsjs")
+
+
 
 
     @RenderSection("scripts", required: false)
