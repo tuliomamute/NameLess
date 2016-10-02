@@ -6,7 +6,7 @@
     <title>Nameless - Esteja um Passo a Frente</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    @Scripts.Render("~/bundles/leafletjs")
     @{
         string UsuarioLogado = User.Identity.IsAuthenticated ? "block" : "none";       
     }
@@ -45,7 +45,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/sitejs")
-    @Scripts.Render("~/bundles/leafletjs")
     @Scripts.Render("~/bundles/mapsjs")
 
 
