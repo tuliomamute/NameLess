@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using SharedModels.Models;
 using Newtonsoft.Json;
+using System.Data.Entity.Spatial;
 
 namespace NameLess.Controllers
 {
@@ -33,15 +34,19 @@ namespace NameLess.Controllers
         }
 
 
-        public ActionResult PointMaps(string DataInicial, string DataFinal)
+        public ActionResult PointMaps(string DataInicial, string DataFinal, string Latitude, string Longitude)
         {
             DateTime datainicio = DateTime.Parse(DataInicial);
             DateTime datafim = DateTime.Parse(DataFinal);
+
+            var coord = DbGeography.FromText($"POINT ({Latitude} {Longitude})");
 
             var json = new
             {
                 Result = db.Pesquisas
                 .Where(x => x.DataPesquisa > datainicio && x.DataPesquisa <= datafim)
+                .OrderBy(x=>x.Localizacao.Distance(coord))
+                .Take(10)
                 .Select(x => new
                 {
                     Latitude = x.Localizacao.Latitude,

@@ -43,19 +43,19 @@
         <div class="form-group">
             <label class="control-label col-md-2">Data Inicial</label>
             <div class="col-md-10">
-                <input type="date" class="form-control" name="DataInicialPontos" id="DataInicialPontos" value="DataInicial" />
+                <input type="date" class="form-control" name="DataInicialPontos" id="DataInicialPontos" value="" />
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-md-2">Data Final</label>
             <div class="col-md-10">
-                <input type="date" class="form-control" name="DataFinalPontos" id="DataFinalPontos" value="DataInicial" />
+                <input type="date" class="form-control" name="DataFinalPontos" id="DataFinalPontos" value="" />
             </div>
         </div>
         <a onclick="CarregarPontos('@Url.Action("PointMaps","Pesquisas")')"><span class="btn btn-success">Pesquisar</span></a>
     </div>
-
+    <br />
     <div id="mapa1"></div>
 
 </div>
