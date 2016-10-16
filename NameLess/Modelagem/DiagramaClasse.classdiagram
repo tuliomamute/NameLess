@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="007d7385-1795-4afc-9a33-7c20292a38af" name="DiagramaClasse" linkedPackageId="f9279e6a-1360-4987-b1ab-8d550180c1d0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="06821cf1-646b-457d-81da-5335911cd3a5">
+      <profileInstance Id="5b17110e-576a-43eb-be79-606c5eb509c2" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6d95028f-a424-41b2-8b80-24bc4c6c21a6">
+      <profileInstance Id="569531ab-4054-460e-a03c-4898abcce7eb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dcec0399-813a-4916-83e5-ae2720bf55a8" name="Tags" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9cf74bd4-7f44-4707-b4f7-7f177dc3a392" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="95004e42-641e-4437-8d59-374a7f89a3c3" name="Pesquisas" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0d9e8f75-b2ab-4ec9-ad45-7081227eac15" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a7ac8933-b3bd-4af8-84ec-2ad643f46b47" name="Cliente" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b17e49c1-27ee-4a89-b0d1-1eb6bd37ad14" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3e818931-7bac-47e8-bd80-c9c25de512f8" name="CamposPesquisas" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9e54e98f-b114-4cab-bbfe-098f7a959772" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="f9279e6a-1360-4987-b1ab-8d550180c1d0" name="Modelagem">
+    <elementDefinition Id="2c7ea136-7671-43ae-9cb8-248d006876c7" />
+  </package>
+</logicalClassDesignerModel>

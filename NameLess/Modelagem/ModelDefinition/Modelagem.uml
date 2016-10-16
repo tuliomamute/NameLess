@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="2c7ea136-7671-43ae-9cb8-248d006876c7"
+  name="Modelagem" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="9cf74bd4-7f44-4707-b4f7-7f177dc3a392"
+        name="Tags"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0d9e8f75-b2ab-4ec9-ad45-7081227eac15"
+        name="Pesquisas"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b17e49c1-27ee-4a89-b0d1-1eb6bd37ad14"
+        name="Cliente"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9e54e98f-b114-4cab-bbfe-098f7a959772"
+        name="CamposPesquisas"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="cdf3e515-73ba-4c9a-bcc8-d8f319cdb658"
+        name="Usuario"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="114790b1-5f14-4a49-bc82-faa8fd59f125"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Manter Tags"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0bcdb4f6-aac3-408c-b8f2-641eec126101"
+              LastKnownName="Manter Tags"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e29d917c-a62d-49bb-ae97-6513b7021bb2"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4011e68f-848d-4547-b49b-4bc6a6056f9b"
+                  name="Manter Tags"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="74f62402-dde7-4941-817a-551ad0e2d299"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Manter Campos Pesquisa"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f3b51351-5444-4523-822c-ea21076bfc74"
+              LastKnownName="Manter Campos Pesquisa"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4473c317-6e59-4d0d-ba59-a0dfbcd26ca2"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0f87731e-b7ba-4e85-a20b-5449068c9044"
+                  name="Manter Campos Pesquisa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9d2c7c10-aae6-40b0-a4da-3f14ff6f5157"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Consultar Pesquisas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="267dfd0d-7bb0-4393-8709-4ef2627c2987"
+              LastKnownName="Consultar Pesquisas"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9cea6e4b-9c70-4ede-891d-69e4eb333f08"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="70290954-7158-4132-b73b-1054c23538bb"
+                  name="Consultar Pesquisas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="541f00c9-8819-42b7-9876-1bd7c0c76616"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Gerar Script"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2e8ffd61-da00-4dfa-8c16-1c9c8130ab89"
+              LastKnownName="Gerar Script"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="105cf444-c9ab-4b80-bd8e-131a1c8ac8e5"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8bc979ae-b3fd-422b-8be3-b5c517f50be2"
+                  name="Gerar Script"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="66ac6e0d-9863-488e-af2c-b3e8253908e7"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Autenticar no Sistema"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f1606ea4-b2ad-4ccd-97dd-5653e9e066c9"
+              LastKnownName="Autenticar no Sistema"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f0f660b-7e7c-42f2-a940-2cae97f88149"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2f714f9-bd38-4143-aa77-44f61bb02010"
+                  name="Autenticar no Sistema"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0bcdb4f6-aac3-408c-b8f2-641eec126101"
+        name="Manter Tags"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f3b51351-5444-4523-822c-ea21076bfc74"
+        name="Manter Campos Pesquisa"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="2695590f-1865-4c6e-be18-a5dd992c33b9">
+            <useCaseMoniker
+              Id="3749a0d1-3487-4510-a358-3c1bd8c0a189"
+              LastKnownName="Selecionar Tag"
+              LastKnownLocation="Modelagem.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="267dfd0d-7bb0-4393-8709-4ef2627c2987"
+        name="Consultar Pesquisas"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d57cdbd7-6ce5-4ec8-a88c-1ad2fa68861a"
+        name="Inserir Pesquisas"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a2d13893-9d9f-4381-a555-2de0063116e9"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="8ea507e4-0426-4442-92b2-f099cbffad4e"
+        name="Sistema Cliente"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="cfcd543c-9ab5-4371-9b8e-1a4a4d32004d"
+            isDerived="false"
+            sourceEndRoleName="Sistema Cliente"
+            targetEndRoleName="Inserir Pesquisas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d57cdbd7-6ce5-4ec8-a88c-1ad2fa68861a"
+              LastKnownName="Inserir Pesquisas"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eff201a8-afde-44c0-a1ab-536c6f670af0"
+                  name="Sistema Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f914aa1-cdf9-483f-97c8-a7c161d7b9ff"
+                  name="Inserir Pesquisas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2e8ffd61-da00-4dfa-8c16-1c9c8130ab89"
+        name="Gerar Script"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3749a0d1-3487-4510-a358-3c1bd8c0a189"
+        name="Selecionar Tag"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="36dcbb4d-77e5-4583-92d6-3b6da46bc9bd"
+        name="Subsystem1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f1606ea4-b2ad-4ccd-97dd-5653e9e066c9"
+        name="Autenticar no Sistema"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
