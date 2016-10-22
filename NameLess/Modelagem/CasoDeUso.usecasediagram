@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="78b7cfaf-932b-4862-b7ff-1618aa6ec0b9" name="CasoDeUso" linkedPackageId="70cd388e-c241-44d2-8dd3-a10d2f2f1867" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="75563276-1a12-43e7-a7de-a92d76d11f0c">
-      <profileInstance Id="16544bc2-dd65-4e44-8791-65a3e8ef009d" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="a81141ca-da37-4e32-92d8-f6887c3b64a9">
-      <profileInstance Id="9521a07c-dd14-4aa3-95dc-d5feae5ac14b" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="78b7cfaf-932b-4862-b7ff-1618aa6ec0b9" name="CasoDeUso" linkedPackageId="70cd388e-c241-44d2-8dd3-a10d2f2f1867" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="7e6ba284-c13c-4ad7-bd79-bb2fd7036c21" name="Usuario" isAbstract="false" isLeaf="false">
@@ -99,6 +85,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="66ac6e0d-9863-488e-af2c-b3e8253908e7" />
           </association>
+          <association Id="0effa610-22bc-4127-9d35-470eccc9ab7b" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Cadastrar no Sistema" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9d8ae437-4531-4d78-9ba5-7e327e13c8a6" LastKnownName="Cadastrar no Sistema" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8354f82b-9a48-4d4b-995e-85423cd5209c" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3c6a3ce0-5d23-4d1d-909d-24d85bd6ca72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="66d14c24-e940-4838-809a-043b9c8ad094" name="Cadastrar no Sistema" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c38697f5-3c52-475a-bfd8-e0d3b11a42cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="60154e61-ec92-4333-8f61-98e75f442025" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -166,8 +168,27 @@
         <elementDefinition Id="f1606ea4-b2ad-4ccd-97dd-5653e9e066c9" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9d8ae437-4531-4d78-9ba5-7e327e13c8a6" name="Cadastrar no Sistema" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aa7bbc00-d9d4-4c8b-a089-738daa1eaaa0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="70cd388e-c241-44d2-8dd3-a10d2f2f1867" name="Modelagem">
     <elementDefinition Id="2c7ea136-7671-43ae-9cb8-248d006876c7" />
+    <profileInstances>
+      <packageHasProfileInstances Id="75563276-1a12-43e7-a7de-a92d76d11f0c">
+        <profileInstance Id="16544bc2-dd65-4e44-8791-65a3e8ef009d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a81141ca-da37-4e32-92d8-f6887c3b64a9">
+        <profileInstance Id="9521a07c-dd14-4aa3-95dc-d5feae5ac14b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
