@@ -5,7 +5,7 @@
                 url: "{UrlApi}",
                 data: {
                     "TermoPesquisado": $('#{IdCampoTexto}').val(),
-                    "DataPesquisa": "2016-08-18T23:38:54.231Z",
+                    "DataPesquisa": new Date(),
                     "ClienteId": { ClienteId },
                     "TagId": { TagId },
                     "Latitude": -19.934028,

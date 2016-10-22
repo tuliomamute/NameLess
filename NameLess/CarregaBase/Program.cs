@@ -18,8 +18,8 @@ namespace CarregaBase
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://namelesswebapi.azurewebsites.net/");
-                //client.BaseAddress = new Uri("http://localhost:65018/");
+                //client.BaseAddress = new Uri("http://namelesswebapi.azurewebsites.net/");
+                client.BaseAddress = new Uri("http://localhost:65018/");
 
                 List<Pesquisa> model = LerArquivo();
                 int contador = 1;

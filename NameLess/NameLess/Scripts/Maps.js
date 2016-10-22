@@ -19,7 +19,7 @@
                     for (var contador = 0; contador < data.Result.length; contador++) {
 
                         L.marker([data.Result[contador].Longitude, data.Result[contador].Latitude])
-                                .bindPopup(data.Result[contador].TermoPesquisado).addTo(cities);
+                                .bindPopup("Termo: " + data.Result[contador].TermoPesquisado + "<br/>Data: " + new Date(parseInt(data.Result[contador].DataPesquisa.substr(6))).toUTCString()).addTo(cities);
                     }
 
                     var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +

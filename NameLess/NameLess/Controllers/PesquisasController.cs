@@ -45,13 +45,14 @@ namespace NameLess.Controllers
             {
                 Result = db.Pesquisas
                 .Where(x => x.DataPesquisa > datainicio && x.DataPesquisa <= datafim)
-                .OrderBy(x=>x.Localizacao.Distance(coord))
+                .OrderBy(x => x.Localizacao.Distance(coord))
                 .Take(10)
                 .Select(x => new
                 {
                     Latitude = x.Localizacao.Latitude,
                     Longitude = x.Localizacao.Longitude,
-                    TermoPesquisado = x.TermoPesquisado
+                    TermoPesquisado = x.TermoPesquisado,
+                    DataPesquisa = x.DataPesquisa
                 })
             };
 
