@@ -24,7 +24,188 @@
         name="Tags"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="2c14bbb7-dbf4-4ed7-9d78-962649f61cf9"
+            isDerived="false"
+            sourceEndRoleName="Tags"
+            targetEndRoleName="CamposPesquisas"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9e54e98f-b114-4cab-bbfe-098f7a959772"
+              LastKnownName="CamposPesquisas"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b6ea893-1dbb-4ad1-9809-b6c7c646f825"
+                  name="Tags"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="514e6e2f-d004-411e-8669-1ebb0107f522"
+                  name="CamposPesquisas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fe72e29f-7248-4b51-a59e-37624216794c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="538f3fb7-8b93-4112-8e8a-f8acdb5e188a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6d798319-1a64-423f-ba37-ff85f0078822"
+            isDerived="false"
+            sourceEndRoleName="Tags"
+            targetEndRoleName="Pesquisas"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0d9e8f75-b2ab-4ec9-ad45-7081227eac15"
+              LastKnownName="Pesquisas"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72614c63-93c9-491a-b599-144ccaee7203"
+                  name="Tags"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aa30c5d8-e380-4589-9c08-8d11966d9aaf"
+                  name="Pesquisas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="dc415ced-5dfe-4df6-9592-aa4f9dd263e0"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="eadae8ba-545e-4de3-b91b-73428899b01f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d67f83da-3cdb-4ad9-a4cc-c8aa479705c7"
+            name="Tag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a14aa35a-28be-4f33-b9a2-7052ecac168e"
+            name="DescricaoTag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ce433094-a616-4b96-9c61-7e2981b49f59"
+            name="ObservacaoTag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b6f80515-96af-412a-9c20-a1f940424e6f"
+            name="TagId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -32,7 +213,75 @@
         name="Pesquisas"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="b203bcc2-417a-48eb-b9df-177b145ec10e"
+            name="PesquisaId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="96af80d5-a708-4053-8caa-7a30d3b89c64"
+            name="TermoPesquisado"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="13e16bf3-ca62-47fd-9ed7-8079779d9323"
+            name="Localizacao"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="91bb4414-8487-479f-b34f-fd78567c1d49"
+            name="DataPesquisa"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="37b474ce-9a05-47a7-b725-693bf3eecf60"
+                LastKnownName="DateTime"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -40,7 +289,136 @@
         name="Cliente"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="f74d0fb8-38bd-45cf-92b8-54238fc5410f"
+            isDerived="false"
+            sourceEndRoleName="Cliente"
+            targetEndRoleName="Pesquisas"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0d9e8f75-b2ab-4ec9-ad45-7081227eac15"
+              LastKnownName="Pesquisas"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fbad6208-f5bf-4fbd-8eac-ae1f6cc4af64"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4c93397c-5795-4e75-a708-a3f00c7adb22"
+                  name="Pesquisas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3f1e6275-a0e4-40a0-a7cf-13056f31fc31"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f3efc3fd-7932-4d61-acbf-e3d4b10f51b1"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="9954b9cc-c719-4a07-9f8c-80dae49105c2"
+            name="NomeCliente"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c251596a-02cc-4800-8e1d-528af47904ab"
+            name="EnderecoCliente"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="802629d6-ca46-43ae-b846-ac23f595114d"
+            name="CnpjCliente"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cca7b14b-6ee3-4713-9c3b-210f01a2abc3"
+            name="ClienteId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -48,7 +426,100 @@
         name="CamposPesquisas"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="89542379-0e1e-47f6-8603-0c3c1ec324c8"
+            name="IdCampoTexto"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="44e57aeb-05b7-48a9-8cd1-803c443d09f6"
+            name="IdCampoBotao"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="08856956-2065-477f-af08-3b7c5780114c"
+            name="TipoCampo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="596ea69a-324b-4b66-b5c2-99f905a67da6"
+            name="TagId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ebb5f5eb-4d02-4fec-bad9-0b101fb03f62"
+            name="CamposPesquisaId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <actor
@@ -423,6 +894,247 @@
         name="Cadastrar no Sistema"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="246546df-fa64-4440-95a8-c809f162e2f9"
+        name="Usuario"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="062eda28-3052-464d-b03e-caf6561006f7"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="CamposPesquisas"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9e54e98f-b114-4cab-bbfe-098f7a959772"
+              LastKnownName="CamposPesquisas"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d0dafdf2-0eb2-4c30-996e-6c76629adda3"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7547b4f4-3f9b-45a4-a792-db4f6b157122"
+                  name="CamposPesquisas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fc56f3e5-4088-4ada-a61c-cd0656a9ff8a"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bb129bb3-3a9e-4114-a332-07a0cb2101fe"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="40236c47-9ecf-4317-8259-8042712819b7"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Tags"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9cf74bd4-7f44-4707-b4f7-7f177dc3a392"
+              LastKnownName="Tags"
+              LastKnownLocation="Modelagem.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fbf42f18-290c-4326-a43e-6a684db1ee73"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="79f690fe-e2d8-462c-8f37-f42184776ec0"
+                  name="Tags"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bc51d2d8-afa3-4ce4-9624-cf3302051e2f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0dc7ae69-7866-4a28-8d46-3a4c423c9bcd"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="0bf7a5a4-584b-4dcd-8e64-c0a9f47945f0"
+            name="Email"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f7e9010a-1163-4ea3-8266-155cbf1c5122"
+            name="Senha"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="82c53242-f8dc-4612-a41b-230b11740176"
+            name="UsuarioId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5530a4e3-e444-46fc-b8e3-7bd7bfe1092b"
+        name="Dashboard"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="f38423e6-3cf4-42cb-91d5-fa20531f3cc8"
+            name="TermoPesquisado"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d37abf15-1a9d-4f22-aac2-cf90bee65e4b"
+            name="DataPesquisa"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="37b474ce-9a05-47a7-b725-693bf3eecf60"
+                LastKnownName="DateTime"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="41f62f22-64c2-4ed4-aa99-4cfa0631e38e"
+            name="DescricaoTag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelagem.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="37b474ce-9a05-47a7-b725-693bf3eecf60"
+        name="DateTime" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
