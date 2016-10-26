@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using SharedModels.Models;
 using Newtonsoft.Json;
 using System.Data.Entity.Spatial;
+using PagedList;
 
 namespace NameLess.Controllers
 {
@@ -18,7 +19,7 @@ namespace NameLess.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Pesquisas
-        public ActionResult DashBoard()
+        public ActionResult DashBoard(int? page)
         {
             List<DashBoard> pesquisa = db.Pesquisas.Join(db.Tags,
                 pes => pes.TagId,
@@ -28,9 +29,12 @@ namespace NameLess.Controllers
                     DescricaoTag = tag.DescricaoTag,
                     TermoPesquisado = pes.TermoPesquisado,
                     DataPesquisa = pes.DataPesquisa
-                }).Take(10).ToList();
+                }).ToList();
 
-            return View(pesquisa);
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(pesquisa.ToPagedList(pageNumber, pageSize));
+
         }
 
 

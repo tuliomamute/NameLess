@@ -1,4 +1,6 @@
-﻿@model IEnumerable<SharedModels.Models.DashBoard>
+﻿@model PagedList.IPagedList<SharedModels.Models.DashBoard>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "DashBoard";
@@ -11,13 +13,13 @@
     <table class="table table-hover table-condensed table-responsive">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DescricaoTag)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().DescricaoTag)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TermoPesquisado)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().TermoPesquisado)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataPesquisa)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().DataPesquisa)
             </th>
         </tr>
 
@@ -37,6 +39,9 @@
         }
 
     </table>
+    Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("DashBoard", new { page }))
 
     <h3>Pesquisas no mapa</h3>
     <div class="form-horizontal">
