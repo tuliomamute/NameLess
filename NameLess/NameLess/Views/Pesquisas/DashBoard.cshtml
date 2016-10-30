@@ -3,68 +3,79 @@
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewBag.Title = "DashBoard";
+    ViewBag.Title = "Dashboard";
 }
 <div class="container body-content">
 
     <h2>DashBoard</h2>
-    <h3>Elementos Pesquisados Por Tag</h3>
-
-    <table class="table table-hover table-condensed table-responsive">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().DescricaoTag)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().TermoPesquisado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().DataPesquisa)
-            </th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DescricaoTag)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TermoPesquisado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DataPesquisa)
-                </td>
-            </tr>
-        }
-
-    </table>
-    Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-
-    @Html.PagedListPager(Model, page => Url.Action("DashBoard", new { page }))
-
-    <h3>Pesquisas no mapa</h3>
-    <div class="form-horizontal">
-        <div class="form-group">
-            <label class="control-label col-md-2">Data Inicial</label>
-            <div class="col-md-10">
-                <input type="date" class="form-control" name="DataInicialPontos" id="DataInicialPontos" value="" />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-md-2">Data Final</label>
-            <div class="col-md-10">
-                <input type="date" class="form-control" name="DataFinalPontos" id="DataFinalPontos" value="" />
-            </div>
-        </div>
-        <a onclick="CarregarPontos('@Url.Action("PointMaps","Pesquisas")')"><span class="btn btn-success">Pesquisar</span></a>
-    </div>
     <br />
-    <div id="mapa1"></div>
+    <div class="panel panel-success">
+        <div class="panel-heading">Elementos Pesquisados Por Tag</div>
+        <div class="panel-body">
+            <div>
+                @Html.PagedListPager(Model, page => Url.Action("DashBoard", new { page }))
+            </div>
+            <table class="table table-hover table-responsive">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().DescricaoTag)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().TermoPesquisado)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().DataPesquisa)
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescricaoTag)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TermoPesquisado)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataPesquisa)
+                        </td>
+                    </tr>
+                }
+            </table>
+            <div>
+                @Html.PagedListPager(Model, page => Url.Action("DashBoard", new { page }))
+            </div>
+
+        </div>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">Pesquisas no mapa</div>
+        <div class="panel-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-2">Data Inicial</label>
+                    <div class="col-md-10">
+                        <input type="date" class="form-control" name="DataInicialPontos" id="DataInicialPontos" value="" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Data Final</label>
+                    <div class="col-md-10">
+                        <input type="date" class="form-control" name="DataFinalPontos" id="DataFinalPontos" value="" />
+                    </div>
+                </div>
+                <a onclick="CarregarPontos('@Url.Action("PointMaps","Pesquisas")')"><span class="btn btn-success">Pesquisar</span></a>
+            </div>
+            <br />
+            <div id="mapa1"></div>
+
+        </div>
+    </div>
+
 
 </div>
-
 <script>
 
 </script>

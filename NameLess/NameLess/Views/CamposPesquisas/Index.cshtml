@@ -7,7 +7,7 @@
     <h2>Início - Campos de Pesquisa</h2>
 
     <p>
-        @Html.ActionLink("Criar Novo", "Create")
+        @Html.ActionLink("Criar Novo", "Create", null, new { @class = "btn btn-primary" })
     </p>
     <table class="table">
         <tr>
@@ -42,10 +42,10 @@
                     @Html.DisplayFor(modelItem => item.TipoCampo)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.CamposPesquisaId }) |
-                    @Html.ActionLink("Detalhes", "Details", new { id = item.CamposPesquisaId }) |
-                    @Html.ActionLink("Excluir", "Delete", new { id = item.CamposPesquisaId }) |
-                    @Html.ActionLink("Download Script", "Script", new { id = item.CamposPesquisaId })
+                    @Html.ActionLink("Editar", "Edit", new { id = item.CamposPesquisaId }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.CamposPesquisaId }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.CamposPesquisaId }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Download Script", "Script", new { id = item.CamposPesquisaId }, new { @class = "btn btn-warning" })
                 </td>
             </tr>
         }

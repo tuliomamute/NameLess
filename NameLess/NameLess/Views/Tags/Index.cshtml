@@ -7,7 +7,7 @@
     <h2>Início - Tags</h2>
 
     <p>
-        @Html.ActionLink("Criar Novo", "Create")
+        @Html.ActionLink("Criar Novo", "Create", null, new { @class = "btn btn-primary" })
     </p>
     <table class="table">
         <tr>
@@ -36,9 +36,9 @@
                     @Html.DisplayFor(modelItem => item.ObservacaoTag)
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.TagId }) |
-                    @Html.ActionLink("Detalhes", "Details", new { id = item.TagId }) |
-                    @Html.ActionLink("Excluir", "Delete", new { id = item.TagId })
+                    @Html.ActionLink("Editar", "Edit", new { id = item.TagId }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.TagId }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.TagId }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }
