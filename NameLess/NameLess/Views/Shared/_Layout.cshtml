@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/leafletjs")
     @{
-        string UsuarioLogado = User.Identity.IsAuthenticated ? "block" : "none";       
+        string UsuarioLogado = User.Identity.IsAuthenticated ? "block" : "none";
     }
 </head>
 <body>
@@ -34,6 +34,9 @@
             </div>
         </div>
     </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/datepickerjs")
     <div>
         @RenderBody()
         <hr />
@@ -42,13 +45,9 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/sitejs")
     @Scripts.Render("~/bundles/mapsjs")
-
-
-
 
     @RenderSection("scripts", required: false)
 </body>

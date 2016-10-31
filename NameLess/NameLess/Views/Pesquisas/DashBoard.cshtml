@@ -49,6 +49,7 @@
 
         </div>
     </div>
+
     <div class="panel panel-success">
         <div class="panel-heading">Pesquisas no mapa</div>
         <div class="panel-body">
@@ -56,7 +57,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-2">Data Inicial</label>
                     <div class="col-md-10">
-                        <input type="date" class="form-control" name="DataInicialPontos" id="DataInicialPontos" value="" />
+                        <input type="text" class="form-control" name="DataInicialPontos" id="DataInicialPontos" value="" />
                     </div>
                 </div>
 
@@ -77,6 +78,13 @@
 
 </div>
 <script>
+    $(function () {
+        $('.form-control').datepicker({
+            calendarWeeks: true,
+            todayHighlight: true,
+            autoclose: true
+        });
+    });
 
 </script>
 
