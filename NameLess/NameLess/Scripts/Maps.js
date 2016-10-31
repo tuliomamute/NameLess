@@ -1,11 +1,12 @@
-﻿function CarregarPontos(url) {
+﻿var map;
+
+function CarregarPontos(url) {
     var DataInicial = $("#DataInicialPontos").val();
     var DataFinal = $("#DataFinalPontos").val();
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
-            var a = a;
-            a = document.getElementById('mapa1');
+
             $.ajax({
                 type: "GET",
                 url: url,
@@ -39,7 +40,11 @@
                         "Cities": cities
                     };
 
-                    var map = L.map('mapa1', {
+                    if (map != null) {
+                        map.remove();
+                    }
+
+                    map = L.map('mapa1', {
                         center: [position.coords.latitude, position.coords.longitude],
                         zoom: 10,
                         layers: [grayscale, cities]
@@ -54,8 +59,7 @@
             });
 
         }, function (error) {
-            var a = a;
-            a = document.getElementById('mapa1');
+
         });
     }
 }
