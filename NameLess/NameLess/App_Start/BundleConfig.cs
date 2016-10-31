@@ -32,8 +32,8 @@ namespace NameLess
             bundles.Add(new ScriptBundle("~/bundles/mapsjs").Include(
                       "~/Scripts/Maps.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/datejs").Include(
-                      "~/Scripts/boostrap-datepicker.js"));
+            bundles.Add(new ScriptBundle("~/bundles/datepickerjs").Include(
+                      "~/Scripts/bootstrap-datepicker.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

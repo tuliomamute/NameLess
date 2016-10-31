@@ -30,17 +30,17 @@
 
                 @foreach (var item in Model)
             {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DescricaoTag)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.TermoPesquisado)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DataPesquisa)
-                        </td>
-                    </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DescricaoTag)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TermoPesquisado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataPesquisa)
+                    </td>
+                </tr>
                 }
             </table>
             <div>
@@ -64,13 +64,13 @@
                 <div class="form-group">
                     <label class="control-label col-md-2">Data Final</label>
                     <div class="col-md-10">
-                        <input type="date" class="form-control" name="DataFinalPontos" id="DataFinalPontos" value="" />
+                        <input type="text" class="form-control" name="DataFinalPontos" id="DataFinalPontos" value="" />
                     </div>
                 </div>
                 <a onclick="CarregarPontos('@Url.Action("PointMaps","Pesquisas")')"><span class="btn btn-success">Pesquisar</span></a>
             </div>
             <br />
-            <div id="mapa1"></div>
+            <div id="mapa1" style="display:none"></div>
 
         </div>
     </div>
@@ -80,9 +80,10 @@
 <script>
     $(function () {
         $('.form-control').datepicker({
-            calendarWeeks: true,
+            calendarWeeks: false,
             todayHighlight: true,
-            autoclose: true
+            autoclose: true,
+            format: "dd/mm/yyyy"
         });
     });
 

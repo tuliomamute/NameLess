@@ -44,6 +44,8 @@ function CarregarPontos(url) {
                         map.remove();
                     }
 
+                    document.getElementById('mapa1').style.display = 'block';
+
                     map = L.map('mapa1', {
                         center: [position.coords.latitude, position.coords.longitude],
                         zoom: 10,
