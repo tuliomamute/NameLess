@@ -75,6 +75,32 @@
         </div>
     </div>
 
+    <div class="panel panel-success">
+        <div class="panel-heading">Mapa de Calor</div>
+        <div class="panel-body">
+
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-2">Data Inicial</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" name="DataInicialCalor" id="DataInicialCalor" value="" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Data Final</label>
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" name="DataFinalCalor" id="DataFinalCalor" value="" />
+                    </div>
+                </div>
+
+                <a onclick="MapaCalor('@Url.Action("PointMaps","Pesquisas")')"><span class="btn btn-success">Pesquisar</span></a>
+
+            </div>
+
+            <div id="map2"></div>
+        </div>
+    </div>
 
 </div>
 <script>
