@@ -19,21 +19,29 @@ namespace NameLess.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Pesquisas
-        public ActionResult DashBoard(int? page)
+        public ActionResult DashBoard(int? page, string searchString)
         {
-            List<DashBoard> pesquisa = db.Pesquisas.Join(db.Tags,
+            List<DashBoard> pesquisaMaterializada = null;
+
+            var pesquisa = db.Pesquisas.Join(db.Tags,
                 pes => pes.TagId,
                 tag => tag.TagId,
-                (pes, tag) => new DashBoard
+                (pes, tag) => new
                 {
                     DescricaoTag = tag.DescricaoTag,
                     TermoPesquisado = pes.TermoPesquisado,
-                    DataPesquisa = pes.DataPesquisa
-                }).ToList();
+                })
+                .GroupBy(x => new { x.DescricaoTag, x.TermoPesquisado })
+                .Select(y => new DashBoard { DescricaoTag = y.Key.DescricaoTag, TermoPesquisado = y.Key.TermoPesquisado, Quantidade = y.Count() });
+
+            if (!String.IsNullOrEmpty(searchString))
+                pesquisaMaterializada = pesquisa.Where(s => s.TermoPesquisado.Contains(searchString)).ToList();
+            else
+                pesquisaMaterializada = pesquisa.ToList();
 
             int pageSize = 10;
             int pageNumber = (page ?? 1);
-            return View(pesquisa.ToPagedList(pageNumber, pageSize));
+            return View(pesquisaMaterializada.ToPagedList(pageNumber, pageSize));
 
         }
 

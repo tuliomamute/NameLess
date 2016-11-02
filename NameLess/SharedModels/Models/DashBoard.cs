@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,5 +17,8 @@ namespace SharedModels.Models
 
         [DisplayName("Termo Pesquisado")]
         public string TermoPesquisado { get; set; }
+
+        [DisplayName("Quantidade")]
+        public int Quantidade { get; set; }
     }
 }
