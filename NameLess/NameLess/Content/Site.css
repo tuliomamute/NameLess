@@ -30,12 +30,6 @@ textarea {
 }
 
 #map2 {
-    height: 400px;
-    display: block;
-    width: 100%;
-}
-
-#map2 {
     width: 800px;
     height: 500px;
 }
