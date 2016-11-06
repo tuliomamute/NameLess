@@ -101,6 +101,10 @@
     <Compile Include="Migrations\201611061355042_CriacaoSiglaEstado.Designer.cs">
       <DependentUpon>201611061355042_CriacaoSiglaEstado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611061708434_SiglaEstado2.cs" />
+    <Compile Include="Migrations\201611061708434_SiglaEstado2.Designer.cs">
+      <DependentUpon>201611061708434_SiglaEstado2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\DashBoard.cs" />
     <Compile Include="Migrations\201608162309439_FirstCommit.cs" />
     <Compile Include="Migrations\201608162309439_FirstCommit.Designer.cs">
@@ -142,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611061355042_CriacaoSiglaEstado.resx">
       <DependentUpon>201611061355042_CriacaoSiglaEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611061708434_SiglaEstado2.resx">
+      <DependentUpon>201611061708434_SiglaEstado2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
