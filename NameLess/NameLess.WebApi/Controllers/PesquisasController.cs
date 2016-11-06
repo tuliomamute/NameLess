@@ -44,16 +44,22 @@ namespace NameLess.WebApi.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://maps.googleapis.com/");
-                var result = client.GetAsync($"/maps/api/geocode/json?latlng={latitude.ToString().Replace(",", ".")},{longitude.ToString().Replace(",", ".")}&result_type=street_address&key=AIzaSyCoPaQDmuU37-jQ17kYmYfcpBjNAPKujKI").Result;
+                var result = client.GetAsync($"/maps/api/geocode/json?latlng={latitude.ToString().Replace(",", ".")},{longitude.ToString().Replace(",", ".")}&key=AIzaSyCoPaQDmuU37-jQ17kYmYfcpBjNAPKujKI").Result;
 
                 //Validação de status code
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     //Conversão de Json para objeto, para retorno da sigla de estado
                     Rootobject root = JsonConvert.DeserializeObject<Rootobject>(result.Content.ReadAsStringAsync().Result);
-                    return $"br-{(root.results[0]).address_components[5].short_name.ToString().ToLower()}";
+
+                    //Validação, para retornar apenas a sigla do estado
+                    foreach (var item in (root.results[0]).address_components)
+                        //Validação para caso venha brasil no valor
+                        if (item.short_name.Length == 2 && item.long_name.ToLower() != "brazil" && item.types[0].Contains("administrative_area_level_"))
+                            return $"br-{item.short_name.ToLower()}";
                 }
             }
+
             return null;
         }
     }
