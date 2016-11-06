@@ -15,6 +15,7 @@ namespace SharedModels.Models
         public string TermoPesquisado { get; set; }
         public DbGeography Localizacao { get; set; }
         public DateTime DataPesquisa { get; set; }
+        public string SiglaEstado { get; set; }
         [Required]
         public int ClienteId { get; set; }
         [Required]
