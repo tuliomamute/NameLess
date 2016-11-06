@@ -44,7 +44,7 @@ namespace NameLess.WebApi.Controllers
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://maps.googleapis.com/");
-                var result = client.GetAsync($"/maps/api/geocode/json?latlng={latitude.ToString().Replace(",", ".")},{longitude.ToString().Replace(",", ".")}&location_type=ROOFTOP&result_type=street_address&key=AIzaSyCoPaQDmuU37-jQ17kYmYfcpBjNAPKujKI").Result;
+                var result = client.GetAsync($"/maps/api/geocode/json?latlng={latitude.ToString().Replace(",", ".")},{longitude.ToString().Replace(",", ".")}&result_type=street_address&key=AIzaSyCoPaQDmuU37-jQ17kYmYfcpBjNAPKujKI").Result;
 
                 //Validação de status code
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
