@@ -71,6 +71,19 @@ namespace NameLess.Controllers
             return Json(json, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult ColorMap(string DataInicial, string DataFinal)
+        {
+            DateTime datainicio = DateTime.Parse(DataInicial);
+            DateTime datafim = DateTime.Parse(DataFinal);
+
+            var json = new
+            {
+                Result = db.Pesquisas.Where(x => x.DataPesquisa > datainicio && x.DataPesquisa <= datafim)
+                  .GroupBy(x => x.SiglaEstado).Select(x => new { SiglaEstado = x.Key, Count = x.Count() })
+            };
+
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
 
         protected override void Dispose(bool disposing)
         {

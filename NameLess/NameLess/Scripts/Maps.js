@@ -65,3 +65,67 @@ function CarregarPontos(url) {
         });
     }
 }
+
+function MapaCalor(url) {
+    var DataInicial = $("#DataInicialCalor").val();
+    var DataFinal = $("#DataFinalCalor").val();
+
+    $.ajax({
+        type: "GET",
+        url: url,
+        contentType: "application/json;",
+        data: { 'DataInicial': DataInicial, 'DataFinal': DataFinal },
+        dataType: "json",
+        success: function (data) {
+
+            var data2 = [];
+
+            for (var contador = 0; contador < data.Result.length; contador++) {
+                data2.push({ "hc-key": data.Result[contador].SiglaEstado, "value": data.Result[contador].Count })
+            }
+            document.getElementById('mapa2').style.display = 'block';
+
+            // Initiate the chart
+            $('#mapa2').highcharts('Map', {
+
+                title: {
+                    text: 'Pesquisas por estado'
+                },
+
+                legend: {
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'bottom'
+                },
+
+                mapNavigation: {
+                    enabled: true,
+                    buttonOptions: {
+                        verticalAlign: 'top'
+                    }
+                },
+
+                colorAxis: {
+                    min: 0
+                },
+
+                series: [{
+                    data: data2,
+                    mapData: Highcharts.maps['countries/br/br-all'],
+                    joinBy: 'hc-key',
+                    name: 'Pesquisas Efetuadas',
+                    states: {
+                        hover: {
+                            color: '#BADA55'
+                        }
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}'
+                    }
+                }]
+            });
+
+        }
+    })
+}
