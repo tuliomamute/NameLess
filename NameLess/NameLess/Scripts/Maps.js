@@ -14,6 +14,8 @@ function CarregarPontos(url) {
         return;
     }
 
+    document.getElementById('atualizarPontos').style.display = 'inline-block';
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
 
@@ -63,16 +65,22 @@ function CarregarPontos(url) {
                     });
 
                     L.control.layers(baseLayers, overlays).addTo(map);
+                    document.getElementById('atualizarPontos').style.display = 'none';
+
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.responseText);
+                    document.getElementById('atualizarPontos').style.display = 'none';
+
                 }
             });
 
         }, function (error) {
-
+            document.getElementById('atualizarPontos').style.display = 'none';
         });
     }
+
+
 }
 
 function MapaCalor(url) {
@@ -88,6 +96,8 @@ function MapaCalor(url) {
         alert("A Data Final, para o 'Mapa de Calor' deve ser informada!");
         return;
     }
+
+    document.getElementById('atualizarMapaCalor').style.display = 'inline-block';
 
     $.ajax({
         type: "GET",
@@ -144,6 +154,11 @@ function MapaCalor(url) {
                     }
                 }]
             });
+            document.getElementById('atualizarMapaCalor').style.display = 'none';
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.responseText);
+            document.getElementById('atualizarPontos').style.display = 'none';
 
         }
     })

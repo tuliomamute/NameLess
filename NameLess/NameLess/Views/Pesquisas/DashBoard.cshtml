@@ -81,6 +81,7 @@
                     </div>
                 </div>
                 <a onclick="CarregarPontos('@Url.Action("PointMaps","Pesquisas")')"><span class="btn btn-success">Pesquisar</span></a>
+                <span id="atualizarPontos" style="display:none" class="glyphicon glyphicon-refresh glyphicon-spin" aria-hidden="true"></span>
             </div>
             <br />
             <div id="mapa1" style="display:none"></div>
@@ -106,9 +107,8 @@
                         <input type="text" class="form-control" data="true" name="DataFinalCalor" id="DataFinalCalor" required="required" value="" />
                     </div>
                 </div>
-
                 <a onclick="MapaCalor('@Url.Action("ColorMap","Pesquisas")')"><span class="btn btn-success">Pesquisar</span></a>
-
+                <span id="atualizarMapaCalor" style="display:none" class="glyphicon glyphicon-refresh glyphicon-spin" aria-hidden="true"></span>
             </div>
 
             <div id="mapa2" style="display:none"></div>
