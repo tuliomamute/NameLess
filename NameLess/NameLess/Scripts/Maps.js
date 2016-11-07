@@ -4,6 +4,16 @@ function CarregarPontos(url) {
     var DataInicial = $("#DataInicialPontos").val();
     var DataFinal = $("#DataFinalPontos").val();
 
+    if (DataInicial == "") {
+        alert("A Data Inicial, para o 'Mapa de Pontos' deve ser informada!  ");
+        return;
+    }
+
+    if (DataFinal == "") {
+        alert("A Data Final, para o 'Mapa de Pontos' deve ser informada!");
+        return;
+    }
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
 
@@ -69,6 +79,16 @@ function CarregarPontos(url) {
 function MapaCalor(url) {
     var DataInicial = $("#DataInicialCalor").val();
     var DataFinal = $("#DataFinalCalor").val();
+
+    if (DataInicial == "") {
+        alert("A Data Inicial, para o 'Mapa de Calor' deve ser informada!");
+        return;
+    }
+
+    if (DataFinal == "") {
+        alert("A Data Final, para o 'Mapa de Calor' deve ser informada!");
+        return;
+    }
 
     $.ajax({
         type: "GET",
