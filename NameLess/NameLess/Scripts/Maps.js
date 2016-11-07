@@ -66,7 +66,6 @@ function CarregarPontos(url) {
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.responseText);
-                    alert(thrownError);
                 }
             });
 

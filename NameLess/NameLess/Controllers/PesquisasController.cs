@@ -48,27 +48,35 @@ namespace NameLess.Controllers
 
         public ActionResult PointMaps(string DataInicial, string DataFinal, string Latitude, string Longitude)
         {
-            DateTime datainicio = DateTime.Parse(DataInicial);
-            DateTime datafim = DateTime.Parse(DataFinal);
-
-            var coord = DbGeography.FromText($"POINT ({Latitude} {Longitude})");
-
-            var json = new
+            try
             {
-                Result = db.Pesquisas
-                .Where(x => x.DataPesquisa > datainicio && x.DataPesquisa <= datafim)
-                .OrderBy(x => x.Localizacao.Distance(coord))
-                .Take(10)
-                .Select(x => new
-                {
-                    Latitude = x.Localizacao.Latitude,
-                    Longitude = x.Localizacao.Longitude,
-                    TermoPesquisado = x.TermoPesquisado,
-                    DataPesquisa = x.DataPesquisa
-                })
-            };
 
-            return Json(json, JsonRequestBehavior.AllowGet);
+                DateTime datainicio = DateTime.Parse(DataInicial);
+                DateTime datafim = DateTime.Parse(DataFinal);
+
+                var coord = DbGeography.FromText($"POINT ({Latitude} {Longitude})");
+
+                var json = new
+                {
+                    Result = db.Pesquisas
+                    .Where(x => x.DataPesquisa > datainicio && x.DataPesquisa <= datafim)
+                    .OrderBy(x => x.Localizacao.Distance(coord))
+                    .Take(10)
+                    .Select(x => new
+                    {
+                        Latitude = x.Localizacao.Latitude,
+                        Longitude = x.Localizacao.Longitude,
+                        TermoPesquisado = x.TermoPesquisado,
+                        DataPesquisa = x.DataPesquisa
+                    })
+                };
+
+                return Json(json, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Content($"Erro:{ex.Message} - Stacktrace:{ex.StackTrace} - InnerException {ex.InnerException}");
+            }
         }
 
         public ActionResult ColorMap(string DataInicial, string DataFinal)
