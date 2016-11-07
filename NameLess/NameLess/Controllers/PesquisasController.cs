@@ -10,6 +10,7 @@ using SharedModels.Models;
 using Newtonsoft.Json;
 using System.Data.Entity.Spatial;
 using PagedList;
+using System.Globalization;
 
 namespace NameLess.Controllers
 {
@@ -44,15 +45,13 @@ namespace NameLess.Controllers
             return View(pesquisaMaterializada.ToPagedList(pageNumber, pageSize));
 
         }
-
-
+        
         public ActionResult PointMaps(string DataInicial, string DataFinal, string Latitude, string Longitude)
         {
             try
             {
-
-                DateTime datainicio = DateTime.Parse(DataInicial);
-                DateTime datafim = DateTime.Parse(DataFinal);
+                DateTime datainicio = DateTime.ParseExact(DataInicial, "dd/MM/yyyy", CultureInfo.CurrentUICulture.DateTimeFormat);
+                DateTime datafim = DateTime.ParseExact(DataFinal, "dd/MM/yyyy", CultureInfo.CurrentUICulture.DateTimeFormat);
 
                 var coord = DbGeography.FromText($"POINT ({Latitude} {Longitude})");
 
@@ -75,22 +74,30 @@ namespace NameLess.Controllers
             }
             catch (Exception ex)
             {
-                return Content($"Erro:{ex.Message} - Stacktrace:{ex.StackTrace} - InnerException {ex.InnerException}");
+                return Content($"Erro: {ex.Message} - Stacktrace: {ex.StackTrace} - InnerException: {ex.InnerException} - Data Inicial: {DataInicial} - Data Final: {DataFinal}");
             }
         }
 
         public ActionResult ColorMap(string DataInicial, string DataFinal)
         {
-            DateTime datainicio = DateTime.Parse(DataInicial);
-            DateTime datafim = DateTime.Parse(DataFinal);
-
-            var json = new
+            try
             {
-                Result = db.Pesquisas.Where(x => x.DataPesquisa > datainicio && x.DataPesquisa <= datafim)
-                  .GroupBy(x => x.SiglaEstado).Select(x => new { SiglaEstado = x.Key, Count = x.Count() })
-            };
+                DateTime datainicio = DateTime.ParseExact(DataInicial, "dd/MM/yyyy", CultureInfo.CurrentUICulture.DateTimeFormat);
+                DateTime datafim = DateTime.ParseExact(DataFinal, "dd/MM/yyyy", CultureInfo.CurrentUICulture.DateTimeFormat);
 
-            return Json(json, JsonRequestBehavior.AllowGet);
+                var json = new
+                {
+                    Result = db.Pesquisas.Where(x => x.DataPesquisa > datainicio && x.DataPesquisa <= datafim)
+                      .GroupBy(x => x.SiglaEstado).Select(x => new { SiglaEstado = x.Key, Count = x.Count() })
+                };
+
+                return Json(json, JsonRequestBehavior.AllowGet);
+            }
+
+            catch (Exception ex)
+            {
+                return Content($"Erro: {ex.Message} - Stacktrace: {ex.StackTrace} - InnerException: {ex.InnerException} - Data Inicial: {DataInicial} - Data Final: {DataFinal}");
+            }
         }
 
         protected override void Dispose(bool disposing)
