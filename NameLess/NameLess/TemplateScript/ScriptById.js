@@ -6,10 +6,10 @@
                 data: {
                     "TermoPesquisado": $('#{IdCampoTexto}').val(),
                     "DataPesquisa": new Date(),
-                    "ClienteId": {ClienteId},
-                    "TagId": {TagId},
-                    "Latitude": -19.934028,
-                    "Longitude": -44.199325
+                    "ClienteId": { ClienteId },
+                    "TagId": { TagId },
+                    "Latitude": position.coords.latitude,
+                    "Longitude": position.coords.longitude
                 },
                 type: "post",
                 dataType: "json",
